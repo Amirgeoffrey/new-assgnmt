@@ -1,0 +1,52 @@
+//program to calculate fines on overdue library books
+//Author:Amir Geoffrey Jeremiah
+//Reg No:CT101/G/23179/24
+//Date:30/09/2024
+#include <stdio.h>
+#include <math.h>
+int main (){
+	int bookid;
+	int duedate;
+	int returndate;
+	int overdue;
+	int finerate;
+	int fineamount;
+	
+	printf("enter bookid");
+	scanf("%d",&bookid);
+	
+	printf("due_date");
+	scanf("%d",&duedate);
+	
+	printf("enter the returndate");
+	scanf("%d",&returndate);
+	
+	overdue=(returndate-duedate);
+	
+	if(overdue <=7) {
+		finerate=20;
+		fineamount=(overdue*finerate);
+		printf("fineamount is %d",fineamount);
+	}
+	
+	else if(overdue<15){
+		finerate=50;
+		fineamount=(overdue*finerate);
+		printf("fine_amount is %d",&fineamount);
+	}
+	
+	else {
+		finerate=100;
+		fineamount=(overdue*finerate);
+		printf("fineamount is %d",&fineamount);
+	}
+	
+	printf("\n the bookid is %d",&bookid);
+	printf("\n the duedate is %d",&duedate);
+	printf("\n the returndate is %d",&returndate);
+	printf("\n the fineamount is %d",&fineamount);
+		return 0;
+	}
+	
+	
+	
